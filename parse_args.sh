@@ -1,8 +1,6 @@
 #!/bin/bash
 OPTIND=1
 
-local version="0.0.1-alpha"
-
 # Preset option arguments (DON'T use the config names, prepend with "a" so we can safely load the config later without overwriting)
 
 
@@ -31,7 +29,7 @@ function usage {
 	echo "  -y       Assume yes for apt-get"
 	echo "  -f       Force rebuild of already build packages (only for world mode)"
 	echo ""
-	echo "$(basename $0) version $version"
+	echo "$(basename $0) version 0.0.1-alpha"
 	return
 }
 
