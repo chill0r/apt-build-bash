@@ -16,14 +16,14 @@ This file is sourced in parse_args.sh so you can use it to provide flags
 for dpkg-buildpackage too if you want
 
 # Commandline arguments
--h       Show this help and exit
--k       Keep build dependencies
--v       Verbose (can be used multiple times)
--c FILE  Use FILE as configuration file
--b CMD   Set the build command to CMD
--r       Build the build dependencies
--y       Assume yes for apt-get
--f       Force rebuild of already build packages (only for world mode)
+-h       Show this help and exit  
+-k       Keep build dependencies  
+-v       Verbose (can be used multiple times)  
+-c FILE  Use FILE as configuration file  
+-b CMD   Set the build command to CMD  
+-r       Build the build dependencies  
+-y       Assume yes for apt-get  
+-f       Force rebuild of already build packages (only for world mode)  
 
 # Modes
 install:  Download, build and install packages
