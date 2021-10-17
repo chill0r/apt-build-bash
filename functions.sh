@@ -62,7 +62,7 @@ function install_package {
 	local is_dep=$1
 	shift 1
 	local packages=$@
-	if [[ $is_dep ]]; then
+	if [[ $is_dep == true ]]; then
 		apt-get $apt_yes --mark-auto install $packages
 	else
 		apt-get $apt_yes install $packages
