@@ -11,6 +11,9 @@ source_cache=/var/cache/apt-build/source
 # Package repository
 pkg_cache=/srv/local-apt-repository
 
+# Ignored packages (checked with grep -E)
+ignored_packages=""
+
 # You can set CFLAGS and so on here. This file will be sourced by apt-build
 # so your environment variables will be set too
 #

@@ -88,19 +88,19 @@ function handler_world {
 	get_installed_packages
 	local pkgs=$ret
 	local todo=""
-	if [[ ! $force_rebuild ]]; then
+	if [[ $force_rebuild != true ]]; then
 		# Remove the packages which are already build
 		for x in $pkgs; do
 			debug 2 "Checking if package $x is already build"
 			if [[ "x$(apt-cache madison $x | head -n 1 | tr -s ' ' | cut -d ' ' -f 4 | grep -E '\+aptbuild[0-9]+')" == "x" ]]; then
-				debug 1 "Adding package $x to the todo list"
-				todo+=" $x"
+				debug 1 "Building the world: Package $x"
+				# ToDo: Add the commandline arguments again
+				apt-build install $x
 			fi
 		done
 	else
 		debug 0 "Rebuilding of already build packages requested, skipped package build check"
-		todo=$pkgs
+		apt-build install $pkgs
 	fi
-	# Pass it to the handler install
-	handler_install false $todo
+	
 }

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-. functions.sh
-. handlers.sh
-. parse_args.sh
+. /usr/lib/apt-build/functions.sh
+. /usr/lib/apt-build/handlers.sh
+. /usr/lib/apt-build/parse_args.sh
