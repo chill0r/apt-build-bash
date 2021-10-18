@@ -1,5 +1,5 @@
 # apt-build-bash
- apt-build written wit pure bash scripts
+ apt-build written with pure bash scripts
 
 # Requirements
  - bash
